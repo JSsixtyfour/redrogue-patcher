@@ -1,3 +1,13 @@
 {
-  "builds": []
+  "builds": [
+    {
+      "id": "2026-10-01 4b495d1e",
+      "label": "2026-10-01 4b495d1e",
+      "date": "2026-10-01",
+      "notes": "",
+      "testing": "",
+      "file": "patches/RedRogue_2026-10-01_4b495d1e_3e4e3f34.bps",
+      "crc32": "d6da8a1a"
+    }
+  ]
 }
