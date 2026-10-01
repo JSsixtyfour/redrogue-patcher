@@ -22,6 +22,10 @@
 		#builds { margin-top: 2em; }
 		#builds a { color: #8ab4f8; }
 		#builds li.current { font-weight: bold; }
+		#game-picker button { font: inherit; font-weight: bold; min-width: 6em; margin: 0 4px; padding: 8px 16px;
+			border-radius: 6px; border: 2px solid #5a5d66; background: #2a2c31; color: #e4e4e6; cursor: pointer; }
+		#game-picker button[data-game="red"][aria-pressed="true"] { border-color: #e05050; background: #5a2626; }
+		#game-picker button[data-game="blue"][aria-pressed="true"] { border-color: #5080e0; background: #263a5a; }
 	</style>
 
 	<script type="text/javascript">
@@ -71,18 +75,54 @@
 			document.getElementById('notes-block').hidden = !build.notes;
 			document.getElementById('testing-block').hidden = !build.testing;
 
+			// One patch per game the build was released for. Early builds listed a single
+			// patch as file + crc32 with no game.
+			const patches = build.patches || [{ game: null, file: build.file, crc32: build.crc32 }];
+			const patchInfo = function (p) {
+				const suffix = patches.length > 1 && GAMES[p.game] ? ' (' + GAMES[p.game].short + ')' : '';
+				return {
+					file: p.file,
+					name: 'Red Rogue ' + build.label + suffix,
+					inputCrc32: p.crc32, // the unmodified ROM's CRC32, read from the patch itself
+					outputName: 'Red Rogue ' + build.id, // every patch of a build gives the same game
+					outputExtension: 'gbc'
+				};
+			};
+			const choose = function (p) {
+				text('rom-game', GAMES[p.game] ? GAMES[p.game].name : 'Pokémon Red or Blue (US/Europe)');
+				for (const button of document.querySelectorAll('#game-picker button'))
+					button.setAttribute('aria-pressed', button.dataset.game === p.game);
+			};
+			if (patches.length > 1) {
+				const picker = document.getElementById('game-picker');
+				for (const p of patches) {
+					const button = document.createElement('button');
+					button.type = 'button';
+					button.dataset.game = p.game;
+					button.textContent = GAMES[p.game] ? GAMES[p.game].short : p.game;
+					button.addEventListener('click', function () {
+						try {
+							RomPatcherWeb.setEmbededPatches(patchInfo(p));
+							choose(p);
+						} catch (err) { } // still downloading the previous patch; the click can be repeated
+					});
+					picker.appendChild(button);
+				}
+				document.getElementById('game-picker-block').hidden = false;
+			}
+			choose(patches[0]);
+
 			RomPatcherWeb.initialize({
 				language: 'en',
-				requireValidation: true, // only an unmodified Pokemon Red (US/Europe) ROM can be patched
+				requireValidation: true, // only the unmodified ROM the patch was made from is accepted
 				allowDropFiles: true
-			}, {
-				file: build.file,
-				name: 'Red Rogue ' + build.label,
-				inputCrc32: build.crc32, // the base ROM's CRC32, read from the patch itself
-				outputName: 'Red Rogue ' + build.id,
-				outputExtension: 'gbc'
-			});
+			}, patchInfo(patches[0]));
 		}
+
+		const GAMES = {
+			red: { short: 'Red', name: 'Pokémon Red (US/Europe)' },
+			blue: { short: 'Blue', name: 'Pokémon Blue (US/Europe)' }
+		};
 
 		window.addEventListener('load', function () {
 			start().catch(function (err) {
@@ -99,9 +139,13 @@
 	<header>
 		<h1>Pokémon Red Rogue</h1>
 		<p class="muted">Playtest build: <strong id="build-label">loading…</strong></p>
-		<p>Drop your own <strong>unmodified Pokémon Red (US/Europe)</strong> ROM onto this page, or pick it
-			below, then press <strong>Apply patch</strong>. Everything happens in your browser; your ROM is never
-			uploaded anywhere.</p>
+		<div id="game-picker-block" hidden>
+			<p>Which game do you have? Either one gives you the same Red Rogue.</p>
+			<div id="game-picker"></div>
+		</div>
+		<p>Drop your own <strong>unmodified <span id="rom-game">Pokémon Red or Blue (US/Europe)</span></strong> ROM
+			onto this page, or pick it below, then press <strong>Apply patch</strong>. Everything happens in your
+			browser; your ROM is never uploaded anywhere.</p>
 		<div id="notes-block" hidden>
 			<p class="muted">What's new</p>
 			<div class="notes" id="build-notes"></div>
