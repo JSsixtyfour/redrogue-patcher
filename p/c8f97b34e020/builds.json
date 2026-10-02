@@ -1,6 +1,25 @@
 {
   "builds": [
     {
+      "id": "2026-10-01 74f82c1b",
+      "label": "2026-10-01 74f82c1b",
+      "date": "2026-10-01",
+      "notes": "• List Menu Fix for First TM Description\n• Wrong Timing on Item Grant - Fixed\n• Turn up for palm\n• Crash Screen Fixing Lance Flicker\n• crash screen tweaks\n• Fix to follower swap via pc and fix to KO defiance text\n• Gamma Paired with Enh Colors\n• Make Release Feature",
+      "testing": "",
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-01_74f82c1b_red_e459f670.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-01_74f82c1b_blue_515b1706.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-01 4b495d1e",
       "label": "2026-10-01 4b495d1e",
       "date": "2026-10-01",
