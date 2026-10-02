@@ -26,6 +26,15 @@
 			border-radius: 6px; border: 2px solid #5a5d66; background: #2a2c31; color: #e4e4e6; cursor: pointer; }
 		#game-picker button[data-game="red"][aria-pressed="true"] { border-color: #e05050; background: #5a2626; }
 		#game-picker button[data-game="blue"][aria-pressed="true"] { border-color: #5080e0; background: #263a5a; }
+		#convert { max-width: 640px; margin: 2.5em auto 0; border-top: 1px solid #4a4d55; padding-top: 1em; }
+		#convert-drop { border: 2px dashed #5a5d66; border-radius: 8px; padding: 18px; text-align: center; margin: .8em 0; }
+		#convert-drop.over { border-color: #8ab4f8; background: #2a2c31; }
+		#convert .step { margin: .8em 0; }
+		#convert .result { background: #2a2c31; border-radius: 6px; padding: 8px 12px; white-space: pre-line; }
+		#convert .bad { color: #ff8080; }
+		#convert .good { color: #8fd18f; }
+		#convert button { font: inherit; font-weight: bold; padding: 8px 16px; border-radius: 6px; border: 2px solid #5a8f5a;
+			background: #263a26; color: #e4e4e6; cursor: pointer; }
 	</style>
 
 	<script type="text/javascript">
@@ -70,6 +79,7 @@
 				return;
 			}
 			text('build-label', build.label + (build === builds[0] ? ' (newest)' : ' (older build)'));
+			setupConvert(build);
 			text('build-notes', build.notes);
 			text('build-testing', build.testing);
 			document.getElementById('notes-block').hidden = !build.notes;
@@ -123,6 +133,139 @@
 			red: { short: 'Red', name: 'Pokémon Red (US/Europe)' },
 			blue: { short: 'Blue', name: 'Pokémon Blue (US/Europe)' }
 		};
+
+		// --- Convert Save ---------------------------------------------------------------
+		// Everything runs on this device: the save, and the old ROM used to identify an
+		// untagged save, are read here and never uploaded. The converter for a build is a
+		// separate, content-addressed script (builds.json save.converter); its SHA-256 is
+		// checked before it runs.
+		const SAVE = { build: null, converter: null, save: null, saveName: '' };
+
+		function convertMessage(id, message, kind) {
+			const el = document.getElementById(id);
+			el.textContent = message || '';
+			el.className = kind || '';
+			el.hidden = !message;
+		}
+
+		async function sha256Hex(buffer) {
+			const digest = await crypto.subtle.digest('SHA-256', buffer);
+			return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+		}
+
+		async function loadConverter(info) {
+			if (SAVE.converter) return SAVE.converter;
+			const response = await fetch(info.converter, { cache: 'force-cache' });
+			if (!response.ok) throw new Error('The save converter for this build could not be downloaded. Refresh and try again.');
+			const text = await response.text();
+			if (await sha256Hex(new TextEncoder().encode(text)) !== info.converter_sha256)
+				throw new Error('The save converter failed its integrity check, so it was not run.');
+			const url = URL.createObjectURL(new Blob([text], { type: 'text/javascript' }));
+			await new Promise(function (resolve, reject) {
+				const script = document.createElement('script');
+				script.src = url;
+				script.onload = resolve;
+				script.onerror = function () { reject(new Error('The save converter could not start.')); };
+				document.head.appendChild(script);
+			});
+			SAVE.converter = window.RRSaveConvert;
+			return SAVE.converter;
+		}
+
+		function setupConvert(build) {
+			SAVE.build = build;
+			const info = build.save;
+			if (!info || !info.converter) {
+				convertMessage('convert-intro', 'Save conversion isn\'t available for this build. If you have a save from an ' +
+					'older build, ask the developers before loading it here.', 'muted');
+				document.getElementById('convert-tools').hidden = true;
+				return;
+			}
+			const picker = document.getElementById('convert-save-input');
+			picker.addEventListener('change', function () { if (picker.files[0]) readSave(picker.files[0]); });
+			document.getElementById('convert-rom-input').addEventListener('change', function (e) {
+				if (e.target.files[0]) readOldRom(e.target.files[0]);
+			});
+			const zone = document.getElementById('convert');
+			zone.addEventListener('dragover', function (e) { e.preventDefault(); document.getElementById('convert-drop').classList.add('over'); });
+			zone.addEventListener('dragleave', function () { document.getElementById('convert-drop').classList.remove('over'); });
+		}
+
+		function looksLikeSaveFile(name) { return /\.(sav|srm|sn\d|ss\d|state\d*|st\d)$/i.test(name || ''); }
+
+		// Capture phase, so Rom Patcher JS (which listens on window, bubbling) never sees a save:
+		// drops on the convert section, and save-like files dropped anywhere, come here.
+		window.addEventListener('drop', function (e) {
+			const files = e.dataTransfer && e.dataTransfer.files;
+			if (!files || files.length !== 1 || !SAVE.build || !SAVE.build.save) return;
+			const inConvert = e.target instanceof Node && document.getElementById('convert').contains(e.target);
+			if (!inConvert && !looksLikeSaveFile(files[0].name)) return;
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			document.getElementById('convert-drop').classList.remove('over');
+			if (SAVE.save && SAVE.needRom && !looksLikeSaveFile(files[0].name)) readOldRom(files[0]);
+			else readSave(files[0]);
+			document.getElementById('convert').scrollIntoView({ behavior: 'smooth' });
+		}, true);
+
+		async function readSave(file) {
+			convertMessage('convert-status', 'Reading ' + file.name + '…', 'muted');
+			document.getElementById('convert-rom-step').hidden = true;
+			document.getElementById('convert-result').hidden = true;
+			SAVE.needRom = false;
+			let api;
+			try { api = await loadConverter(SAVE.build.save); } catch (err) { convertMessage('convert-status', err.message, 'bad'); return; }
+			SAVE.save = new Uint8Array(await file.arrayBuffer());
+			SAVE.saveName = file.name;
+			const id = api.identify(SAVE.save, api.PACKAGE);
+			if (!id.ok) { convertMessage('convert-status', id.reason, 'bad'); return; }
+			if (id.tagged && id.source === String(api.PACKAGE.target.schema)) {
+				convertMessage('convert-status', 'This save already works with ' + SAVE.build.label + '. Nothing to convert: ' +
+					'load it with the patched ROM and choose CONTINUE.', 'good');
+				return;
+			}
+			if (!id.tagged) {
+				SAVE.needRom = true;
+				convertMessage('convert-status', id.reason, 'muted');
+				document.getElementById('convert-rom-step').hidden = false;
+				return;
+			}
+			finish(api, null);
+		}
+
+		async function readOldRom(file) {
+			const api = SAVE.converter;
+			convertMessage('convert-status', 'Checking ' + file.name + '…', 'muted');
+			const hash = await sha256Hex(await file.arrayBuffer());
+			const source = api.sourceFromRom(hash, api.PACKAGE);
+			if (!source) {
+				const known = api.PACKAGE.sources.map(s => s.label).join(', ');
+				convertMessage('convert-status', 'That ROM isn\'t a Red Rogue build this converter can read saves from ' +
+					'(it knows: ' + known + '). Pick the exact patched ROM you played with, not the original Pokémon ROM.', 'bad');
+				return;
+			}
+			SAVE.needRom = false;
+			document.getElementById('convert-rom-step').hidden = true;
+			finish(api, source);
+		}
+
+		function finish(api, source) {
+			const result = api.convert(SAVE.save, api.PACKAGE, { source: source ? source.id : undefined, mode: 'continue' });
+			if (!result.ok) { convertMessage('convert-status', result.reason, 'bad'); return; }
+			const from = source ? source.label : 'save format ' + result.report.from;
+			convertMessage('convert-status', '', '');
+			const box = document.getElementById('convert-result');
+			box.hidden = false;
+			document.getElementById('convert-summary').textContent =
+				'From: ' + from + '\nTo: ' + SAVE.build.label + '\nResult: everything carries over (your run, party, PC, ' +
+				'items and progress).';
+			const name = 'Red Rogue ' + SAVE.build.id + '.sav';
+			const link = document.getElementById('convert-download');
+			if (link.href) URL.revokeObjectURL(link.href);
+			link.href = URL.createObjectURL(new Blob([result.bytes], { type: 'application/octet-stream' }));
+			link.download = name;
+			document.getElementById('convert-name').textContent = name;
+		}
 
 		window.addEventListener('load', function () {
 			start().catch(function (err) {
@@ -204,6 +347,32 @@
 			<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
 		</div>
 	</div>
+
+	<section id="convert">
+		<h2>Already playing? Convert your save</h2>
+		<p id="convert-intro">A save from an older build may need converting before this build can load it. Your
+			original save file is never changed; you get a new one to use instead.</p>
+		<div id="convert-tools">
+			<div id="convert-drop">
+				<p>Drop your save here (<strong>.sav</strong> or <strong>.srm</strong>), or pick it:</p>
+				<input type="file" id="convert-save-input" accept=".sav,.srm,application/octet-stream" />
+				<p class="muted">Use the game's own save file, not an emulator save state. Back it up first.</p>
+			</div>
+			<div id="convert-rom-step" class="step" hidden>
+				<p><strong>Then pick the patched Red Rogue ROM you played this save with</strong> (the .gbc you made on
+					this page back then). It is only read to tell which build the save is from.</p>
+				<input type="file" id="convert-rom-input" accept=".gbc,.gb" />
+			</div>
+			<p id="convert-status" hidden></p>
+			<div id="convert-result" class="step" hidden>
+				<div class="result" id="convert-summary"></div>
+				<p><a id="convert-download"><button type="button">Download <span id="convert-name"></span></button></a></p>
+				<p class="muted">To use it: keep your old save somewhere safe, then give the new file the same name as your
+					patched ROM (most emulators load "Red Rogue ….sav" next to "Red Rogue ….gbc"), or use your emulator's
+					<em>Import save</em>. Start the game and choose <strong>CONTINUE</strong>.</p>
+			</div>
+		</div>
+	</section>
 
 	<div id="builds" hidden>
 		<p class="muted">Other builds (only play an older one if a developer asks you to):</p>
