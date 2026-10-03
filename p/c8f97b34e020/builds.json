@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-03 48b32581",
+      "label": "2026-10-03 48b32581",
+      "date": "2026-10-03",
+      "notes": "• Fixes to make player face trainer\n• blackout fix v2\n• balance adjustments E\n• Save Restore\n• Blackout Fixes, Stat Item Usage Fixes, Progression F, 7F Fix\n• Moveset strings\n• Post Defeat moveset info\n• Fix to lobby Relearner, Lobby Doors, Changes to Make release\n• Additional Fixes Healing Animation in Lobby and door\n• Healing Items pricing, potion grants, no duplicates, challenge updates",
+      "testing": "",
+      "save": {
+        "schema": 1,
+        "rom_sha256": "7d013dcb5bba9470e49bdd13ed9b8a1f4b2c56715e7e539a90cfd4dc290d1902",
+        "converter": "save/save-convert-a51d8edd8939.js",
+        "converter_sha256": "a51d8edd893901224cfd8a2324b39c3e17360d6cb87b8140da0a8db0e7e98f71",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-03_48b32581_red_7ecc27e5.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-03_48b32581_blue_66185426.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-01 74f82c1b",
       "label": "2026-10-01 74f82c1b",
       "date": "2026-10-01",
