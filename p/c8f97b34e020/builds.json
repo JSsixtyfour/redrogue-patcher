@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-05 8e6ca844",
+      "label": "2026-10-05 8e6ca844",
+      "date": "2026-10-05",
+      "notes": "• Various Bag Fixes, pewter Gym Tweaks\n• Bag Pocket Fixes, stat pocket count, route 3 and Diglets Cave Update\n• Seafoam Biker off Bike, Fixed in Battle Item Glitch\n• Removed Legacy Bag Code\n• Growlithe Gift Fix\n• Fix to in battle evolution and VRAM copying\n• Jesse James Music + Potentially TM Crash fix\n• Blue Twitch fix\n• 7f adjustment for 4 trainers\n• Fix to Blackout issues, Fix to Wavy Delay 3 issues, Dig Fixes\n• Selling CUrsor\n• Move Tutor Revamp\n• Fix Procedural Stage to Gym Issues and miscounts\n• Miniboss and Procedural updates\n• Moveset updates\n• adjusting moveset rungs\n• Missed Files and Fix for Smoke Test Tutor Price\n• Update main.yml\n• Minor Tweaks\n• Balance Updates, Economy + Wild Areas\n• Graphical Glitches, Updates to Procedural Trainer Vision, Ghost Graphics Fix",
+      "testing": "",
+      "save": {
+        "schema": 3,
+        "rom_sha256": "0b0c9953594ec16df0d932e7706097cc26cb5fcb78f625d34e05ada30b22df69",
+        "converter": "save/save-convert-36e0174773c7.js",
+        "converter_sha256": "36e0174773c76a00c34650bc10d7ead32d8bf5a4b4038f8007c68d5f2827344f",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-05_8e6ca844_red_9fea557e.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-05_8e6ca844_blue_b793314d.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-03 48b32581",
       "label": "2026-10-03 48b32581",
       "date": "2026-10-03",
