@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-07 112c1a5e",
+      "label": "2026-10-07 112c1a5e",
+      "date": "2026-10-07",
+      "notes": "• Text and Enh Palette Generators, Colored Balls Code, Officer Jenny Growlithe Update\n• Setting Procedural Colors and Tools, Finalziing colored balls\n• mansion burglar text fix + Audit update, ball palette changes,\n• Rest Fix, Leftovers Fix +  Buff, Some Route Fixes for No turning back\n• Oaks Lab Gift Crash, Rival text fix, flinch fix, psychic fix, some comments\n• Instant Text Fixes, Info POkemon, Difficulty Intro, Pokeball fix, Text fix\n• Info screen updates\n• Fixed Cursor Issue RR0013\n• Info Selection Fixes",
+      "testing": "",
+      "save": {
+        "schema": 4,
+        "rom_sha256": "003e3fb7d98919f9ae7b83d1f7bc3533322c85dfa5ccd646ad0115f12716af95",
+        "converter": "save/save-convert-d344771c73a6.js",
+        "converter_sha256": "d344771c73a67a8d24aee8c89115e5fa5790c3facdfcc1b4374228833590fc42",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-07_112c1a5e_red_abcf54c2.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-07_112c1a5e_blue_03abe1fd.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-05 8e6ca844",
       "label": "2026-10-05 8e6ca844",
       "date": "2026-10-05",
