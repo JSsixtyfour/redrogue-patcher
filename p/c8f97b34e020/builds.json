@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-08 aeac96b1",
+      "label": "2026-10-08 aeac96b1",
+      "date": "2026-10-08",
+      "notes": "• Forms Info Box, Party System Phase 1, Fix to Rival Starter Recording and Champion Text\n• Party System revision\n• Champion Pools established\n• gamlbers modernized\n• RR-0018 Fix, Party System Expansion, Clerk Bag Fix\n• party screen rotation and reward info page skip\n• speed up party swapping by cutting cries\n• PokeCrystal Image Decompression - Phase A\n• PokeCrystal Image Decompression - Phase B\n• text fix\n• Rarity Updates, Invis Ambush Fix,\n• Avoiding SRAM Bank due to Everdrive Hardware Savestate issue\n• test update\n• Karate Dojo Joypad Fix, Item text expansion, healing item economy change, parasweep test fix,\n• Finished item descriptions, AI updates\n• changes regarding AI kill and setup\n• boulder text",
+      "testing": "",
+      "save": {
+        "schema": 6,
+        "rom_sha256": "afc8d0138ab9ac1d73eb98d17b8a0ca42c4405506f0c8e7eb32e898a8b55db30",
+        "converter": "save/save-convert-92ef05f2b0d0.js",
+        "converter_sha256": "92ef05f2b0d01cd95e54c0efae0e675b31a2239405c66f50f9b1895834eb6265",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-08_aeac96b1_red_d9ffbb3c.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-08_aeac96b1_blue_ff850451.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-07 112c1a5e",
       "label": "2026-10-07 112c1a5e",
       "date": "2026-10-07",
