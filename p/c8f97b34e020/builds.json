@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-10 e12b99e0",
+      "label": "2026-10-10 e12b99e0",
+      "date": "2026-10-10",
+      "notes": "• attempted save conversion fix\n• Fixed RR-0021, add reduced motion option, added default palette to procedural forest\n• ditto can't be a boss, palette toll updates, gamma made a toggle, off by default\n• Johto Sprite Fixes\n• Backs for Bug Catcher and Gentleman\n• RR-0025 · BUG\n• Credits Prototyping and Updates, Phase 0+1 of balance rework\n• Phase 2 of Balance Pass G\n• PHase 3 of Balancing Curve G - Double Gym Doors, PSychic, Signs, Bridges go back to lobby, pokemon updates\n• Curve G Phase 3-5 Two less routes\n• Level 10 STAB Sweep + New pokemon adjustments part 1\n• whoops",
+      "testing": "Please test for game flow and pacing. Two routes have been removed, which required a signifcant amount of revising things",
+      "save": {
+        "schema": 7,
+        "rom_sha256": "d8dbe97e57e01f270cf72d90eecb63d8a33a9ba810e41e29447927c691d5a1f6",
+        "converter": "save/save-convert-664765ca1d3b.js",
+        "converter_sha256": "664765ca1d3b8d8882cc910356686bddc390a7e900fc43021fec664050b91e67",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-10_e12b99e0_red_090e711e.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-10_e12b99e0_blue_6718343d.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-08 aeac96b1",
       "label": "2026-10-08 aeac96b1",
       "date": "2026-10-08",
