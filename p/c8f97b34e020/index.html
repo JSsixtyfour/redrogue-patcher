@@ -259,7 +259,10 @@
 			document.getElementById('convert-summary').textContent =
 				'From: ' + from + '\nTo: ' + SAVE.build.label + '\nResult: everything carries over (your run, party, PC, ' +
 				'items and progress).';
-			const name = 'Red Rogue ' + SAVE.build.id + '.sav';
+			// Keep the uploaded file's extension: flash carts read battery saves as .srm and use .sav
+			// for their own save states (EverDrive), so a .srm handed back as .sav is ignored.
+			const ext = /\.srm$/i.test(SAVE.saveName || '') ? '.srm' : '.sav';
+			const name = 'Red Rogue ' + SAVE.build.id + ext;
 			const link = document.getElementById('convert-download');
 			if (link.href) URL.revokeObjectURL(link.href);
 			link.href = URL.createObjectURL(new Blob([result.bytes], { type: 'application/octet-stream' }));
@@ -369,7 +372,9 @@
 				<p><a id="convert-download"><button type="button">Download <span id="convert-name"></span></button></a></p>
 				<p class="muted">To use it: keep your old save somewhere safe, then give the new file the same name as your
 					patched ROM (most emulators load "Red Rogue ….sav" next to "Red Rogue ….gbc"), or use your emulator's
-					<em>Import save</em>. Start the game and choose <strong>CONTINUE</strong>.</p>
+					<em>Import save</em>. The file keeps the ending you gave it: a flash cart such as an EverDrive wants
+					<strong>.srm</strong> (it uses .sav for save states), so convert your cart's .srm and copy the result back
+					to its save folder. Start the game and choose <strong>CONTINUE</strong>.</p>
 			</div>
 		</div>
 	</section>
