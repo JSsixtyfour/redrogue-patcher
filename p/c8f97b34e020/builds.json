@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-15 865af2f1",
+      "label": "2026-10-15 865af2f1",
+      "date": "2026-10-15",
+      "notes": "• 1F Entrance Change totodile updates\n• Tauros!\n• Tauros Fix, off by one, added stones, tweaks to evolutions\n• Evolution Name Bug Fix Forms RR-0028, Flying Charizard, cyndaquil adjustments, day care fixes\n• slowpoke!\n• legendary dogs, rental receptionist\n• dogs 2!\n• Pokemon Rental Phase 1, Tracking\n• Phase 2 Rental Guards\n• Rental Daycare Cleanup for Buffoons\n• Detached Cheat Menu from Saved Progression\n• Phase 3 retrieval\n• PHase 4 - Clearing Rental\n• Tracking, Restoring, Ect\n• more pokemon updates\n• Further Pokemon Updates and R Symbol\n• rental work\n• Rental System Functional\n• Rental System Functional\n• Rival's Duplicate Evolution Routine Removed, Trainer evolution updated\n• more pokeupdates\n• Trade Evo Fixes\n• Final Boss Fusion Helper\n• rival team updates, swines\n• Update lugia.asm\n• Update evos_moves.asm\n• Update element_prism.asm\n• Rental Updates, Miniboss Text Fixes\n• Fixed Elemental Grants, Fixed Reward Balls\n…and 15 more",
+      "testing": "",
+      "save": {
+        "schema": 11,
+        "rom_sha256": "5098f46e0fbb8598240f705a6e8565f6de429692f5e298d3274e245f3377cbb5",
+        "converter": "save/save-convert-f2a193c42286.js",
+        "converter_sha256": "f2a193c42286446ab2d517551070eeea981611b7cb7eb5833f5c437fcddca4c0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-15_865af2f1_red_36e2ead8.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-15_865af2f1_blue_fb43e099.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-10 e12b99e0",
       "label": "2026-10-10 e12b99e0",
       "date": "2026-10-10",
