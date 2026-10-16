@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-16 120d35ad",
+      "label": "2026-10-16 120d35ad",
+      "date": "2026-10-16",
+      "notes": "• Move Updates\n• Further Make Release improvement\n• Psywave 0 damage prevent\n• Sleep Clause Added\n• Evoltution Stones for Forms, Magikarp removed from early party, Lots of pokemon updates\n• Removed some undesired pokemon, changed tests, other things\n• Revised Form Based Rarity\n• Removed Galarian Mime and Revised Rarity System\n• Rarity Updates: Movement, Fixing PC Glitch in Dorm\n• badge update\n• Johto Leader faces\n• Personalities Put in Play, ShinRed Imports\n• personality rolls changed\n• Update schema_11.json",
+      "testing": "",
+      "save": {
+        "schema": 11,
+        "rom_sha256": "3752ed41ede315af4150ce5764fe2f6f48a9d62f7e88b93858fc30b9fab0e525",
+        "converter": "save/save-convert-f2a193c42286.js",
+        "converter_sha256": "f2a193c42286446ab2d517551070eeea981611b7cb7eb5833f5c437fcddca4c0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-16_120d35ad_red_56b3303e.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-16_120d35ad_blue_19743bbd.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-15 865af2f1",
       "label": "2026-10-15 865af2f1",
       "date": "2026-10-15",
