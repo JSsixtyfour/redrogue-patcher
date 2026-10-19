@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-19 9eea562a",
+      "label": "2026-10-19 9eea562a",
+      "date": "2026-10-19",
+      "notes": "• Changing some form evolutions\n• harcanine, procedural trainer text, ghost prevention for cemetery boss\n• Alloan Marowak\n• Fixed some form related issues, more pokeupdates\n• Ponyta!\n• Forms Compatibility Audit, Sandshrew!\n• PHase 1 Form Evolution\n• Form Evolution Rework, Test update for spinners\n• Form sets added\n• Removed Trade Exp Boost, Pokemo Stat Changes, Adjusted Wild Pokemon Limits, Pokemon Move Updates\n• Whoops + Balance Model Update + BST Changes,\n• Cleanup + Geodudes\n• TM updates\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Update README.md\n• Credits Update, Pokeupdates, More Substitute Changes\n• Blackthorn Fixes + Decompression Speed Up - Credit PureRGB\n• Update test_rental_zones.py\n• Key Item Bag Fixes, Item PC Removal\n• Two tests had issues",
+      "testing": "",
+      "save": {
+        "schema": 11,
+        "rom_sha256": "01cb468cc87316b355adfa409791acbb05ff3ab9ba71c134c049f97ee3be455d",
+        "converter": "save/save-convert-f2a193c42286.js",
+        "converter_sha256": "f2a193c42286446ab2d517551070eeea981611b7cb7eb5833f5c437fcddca4c0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-19_9eea562a_red_771574cf.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-19_9eea562a_blue_9dad6da3.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-16 120d35ad",
       "label": "2026-10-16 120d35ad",
       "date": "2026-10-16",
