@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-21 20e709cd",
+      "label": "2026-10-21 20e709cd",
+      "date": "2026-10-21",
+      "notes": "• More Item Fixes, Marill, Sudowoodo\n• aipom!\n• Stop the lobby arrival tile from acting as a stage door\n• Testing Bots and Associated Fixes\n• Update README.md\n• Ditto Transform Stalemate fix, Bridge Text Fix\n• whoops\n• Sprite Updates, Key Item Checkpoints, Credits, Stone Evo Fixes\n• Update README.md\n• Update README.md\n• Partial Cheat and other work, Sprite updates, Bot swarm updates, fix to witch and gift text\n• End Run in Options, Autoplay, AI Lair Fixes\n• invis giovanni fix, autoplay updates versions+saves+garbled\n• Nightly Checks\n• Sprite Updates\n• Credits Update, Move Comments, PP for Enemies, Forms Image fix\n• Gen 2 Snub Rule + Improved Back Sprites\n• Locked, TM Sweep",
+      "testing": "",
+      "save": {
+        "schema": 11,
+        "rom_sha256": "ae993d17062f17d617023c65e1ac662784ef58849b131c8eddf9e1b3becd0d50",
+        "converter": "save/save-convert-f2a193c42286.js",
+        "converter_sha256": "f2a193c42286446ab2d517551070eeea981611b7cb7eb5833f5c437fcddca4c0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-21_20e709cd_red_decdeea0.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-21_20e709cd_blue_e977b174.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-19 9eea562a",
       "label": "2026-10-19 9eea562a",
       "date": "2026-10-19",
