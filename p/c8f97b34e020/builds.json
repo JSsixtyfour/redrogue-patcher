@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-22 e797f155",
+      "label": "2026-10-22 e797f155",
+      "date": "2026-10-22",
+      "notes": "• Ghost mon evolve fix, TM updates, bot swam telemetry,\n• Personalities Reduced Influence, s2 fixes\n• Massive AI Overhaul, some from prior committs\n• Too long descriptions caused cursor bug for dojo\n• Prototype rental rollback\n• AI Review Review\n• AI Review Review Part 2\n• A few more tweaks\n• AI REVIEW REVIEW REVIEW\n• Rocket and Mamoswine Backs, Red Rogue Pokemid\n• Music Tool Work\n• Music Kit, Pokemon Updates\n• Fix to incorrect movesets, updating more learnsets, readme for tool\n• Music Tool Updates and Movesets\n• Moveset corpus now in master\n• Autoplay updates, Save exploration\n• Boost legendary battle chances\n• Update README.md\n• Update README.md\n• AI decision making timing + AI Switching Timing + Blackout save updates\n• Save Updates and AI Switching Updates\n• Octillery Sprite and other Sprite Updates, Import Tool,, AI Switching Fixes\n• Make Updates, AI Tooling, More AI fixes",
+      "testing": "",
+      "save": {
+        "schema": 12,
+        "rom_sha256": "af728d9c8fe8efcb86f56cb4c338db691746b8fdecc8654611b40dad7746ba05",
+        "converter": "save/save-convert-8bfb4b8f4fae.js",
+        "converter_sha256": "8bfb4b8f4faeedf3433b7bc8bdfde597bcce982bc0db5ba68c798a97af6ed4a0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-22_e797f155_red_f7fb94f2.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-22_e797f155_blue_34079d60.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-21 20e709cd",
       "label": "2026-10-21 20e709cd",
       "date": "2026-10-21",
