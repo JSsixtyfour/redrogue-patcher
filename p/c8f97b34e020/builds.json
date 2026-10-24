@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-24 fe99f5a8",
+      "label": "2026-10-24 fe99f5a8",
+      "date": "2026-10-24",
+      "notes": "• Team Updates\n• Further updates\n• Psychic doesn't appear during gift period",
+      "testing": "",
+      "save": {
+        "schema": 12,
+        "rom_sha256": "915ea25fccaae9faf83a8c328c4c69247ca18dcf6edf7df76f700ca0c803b3d4",
+        "converter": "save/save-convert-8bfb4b8f4fae.js",
+        "converter_sha256": "8bfb4b8f4faeedf3433b7bc8bdfde597bcce982bc0db5ba68c798a97af6ed4a0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-24_fe99f5a8_red_c1426520.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-24_fe99f5a8_blue_0bdb5fbe.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-22 e797f155",
       "label": "2026-10-22 e797f155",
       "date": "2026-10-22",
