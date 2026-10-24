@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-24 306462ba",
+      "label": "2026-10-24 306462ba",
+      "date": "2026-10-24",
+      "notes": "• Blackthorn Visibility Fix",
+      "testing": "",
+      "save": {
+        "schema": 12,
+        "rom_sha256": "27686ebc4a93a366ffc82cadaa4327985687dce4fbd86ef427199641c790f98d",
+        "converter": "save/save-convert-8bfb4b8f4fae.js",
+        "converter_sha256": "8bfb4b8f4faeedf3433b7bc8bdfde597bcce982bc0db5ba68c798a97af6ed4a0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-24_306462ba_red_ffd49b98.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-24_306462ba_blue_95d1e4fb.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-24 fe99f5a8",
       "label": "2026-10-24 fe99f5a8",
       "date": "2026-10-24",
