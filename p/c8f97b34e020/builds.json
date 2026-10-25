@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-24 e1e6cf4c",
+      "label": "2026-10-24 e1e6cf4c",
+      "date": "2026-10-24",
+      "notes": "• New Sprites\n• Corrected Jr TrainferF and Birdkeeper added\n• Sensitivity Updates\n• small tweak\n• Description Update",
+      "testing": "",
+      "save": {
+        "schema": 12,
+        "rom_sha256": "096eff5536a5ae8e749f1b78ca6da653daeb7b2750be7c3bfe4a81cca3af5353",
+        "converter": "save/save-convert-8bfb4b8f4fae.js",
+        "converter_sha256": "8bfb4b8f4faeedf3433b7bc8bdfde597bcce982bc0db5ba68c798a97af6ed4a0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-24_e1e6cf4c_red_15f87763.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-24_e1e6cf4c_blue_869e0d04.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-24 306462ba",
       "label": "2026-10-24 306462ba",
       "date": "2026-10-24",
