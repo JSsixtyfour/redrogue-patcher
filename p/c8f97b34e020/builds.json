@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-25 73658f8f",
+      "label": "2026-10-25 73658f8f",
+      "date": "2026-10-25",
+      "notes": "• Minor Fixes, Wild Areas cannot return from entrance\n• Update README.md\n• Update README.md\n• Credit Store Revisions, Gym 1 Ace Band, TM Pricing changes\n• Witch Pokemon Limits + Reduced Rarity update\n• Update README.md\n• G Farfetched and a bunch of backsprites\n• Fixing the Invisible Lance Dance - Toggle Issue - RR-0030 · BUG Fix\n• Update blackbeltb.png\n• Update sprite_decompression_golden.json\n• test fixes",
+      "testing": "",
+      "save": {
+        "schema": 12,
+        "rom_sha256": "81251c2f6013becefdbc873f0640e45ac9e548c9305d92d6b425c4e63b358add",
+        "converter": "save/save-convert-8bfb4b8f4fae.js",
+        "converter_sha256": "8bfb4b8f4faeedf3433b7bc8bdfde597bcce982bc0db5ba68c798a97af6ed4a0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-25_73658f8f_red_3d09803d.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-25_73658f8f_blue_5020fa4c.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-24 e1e6cf4c",
       "label": "2026-10-24 e1e6cf4c",
       "date": "2026-10-24",
