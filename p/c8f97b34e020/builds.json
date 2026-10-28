@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-28 212507c4",
+      "label": "2026-10-28 212507c4",
+      "date": "2026-10-28",
+      "notes": "• Minor Gift Giver Tweaks\n• Lobby optimization, Run Timer\n• RR-0032 fix, too long text, further lobby improvements\n• RR-0033 Fixed, Evolve Learnset fix, RR-0034 Fixed, RR-0035 Fixed Johto Gym visibility fixes, RR-0031, credit fixes\n• Update README.md\n• Sprite Updates\n• Fixed Free Items Witch Glitch RR-0036\n• Credit Upgrade Prices Change, fix to route progress bug double reward and no lobby lady\n• Reward Room Item Moved, Moveset Revisions Phase 1\n• Phase 2 of Moveset Revisions\n• Double trade confirmation text fix, Movesets Phase 3, Jynx Learnset update\n• Some minor fixes\n• Disappearing trader/rental return issue fixed\n• Moveset System Rebalance 1\n• Phase 2 of Moveset Rebalance\n• Moveset Rebalance Cleanup\n• GMime returns, A Mewtwo added, Movesets added\n• Changes to Gym TM selection, Slowbro back sprite, victory road entry fix RR-0037\n• Glowbro back sprite added",
+      "testing": "",
+      "save": {
+        "schema": 13,
+        "rom_sha256": "3b00231b134675ed6883ab4110092e7c63090883cbca6a0d46f115dffa3bdfea",
+        "converter": "save/save-convert-d0c4b6f36c93.js",
+        "converter_sha256": "d0c4b6f36c93e7428fa924a548b9982ca597ab7ad023c05ee5cad212b5277c84",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-28_212507c4_red_0e604b00.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-28_212507c4_blue_5744039f.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-25 73658f8f",
       "label": "2026-10-25 73658f8f",
       "date": "2026-10-25",
