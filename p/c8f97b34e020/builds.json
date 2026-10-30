@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-29 8afbd0d1",
+      "label": "2026-10-29 8afbd0d1",
+      "date": "2026-10-29",
+      "notes": "• Update README.md\n• Step 1 Endless Mode\n• Part 2 Endless Mode\n• Autoplay Updates, Endless Mode upto Checkpoint C\n• Dannye Crystal Sound Engine Port Phase 1 + Endless Work\n• Crystal Audio Pport Phase 2 nearly complete\n• Update README.md\n• autoplay fixes\n• Forest enhanced colors update, autoplay updates, Update to Music Kit\n• Autoplay Updates, Kit Crystal Updates, RR-0038 · Bug · Officer Jenny fixed, Phase D of Endless Mode\n• Autoplay updates, music kit\n• Controller Step of Auto Play testing, Phase E of Endless, Music Kit\n• Autoplay Ledger, Endless Updates Step 3 - Ubers, Music Updates\n• Endless Phase F, Autoplay reporting update, importing some johto songs via kit, sound test\n• step 6 phase E of Endless Mode, Audio Updates, Autoplay updates\n• Endless Mode complete, autoplay updates\n• text fixes RR-0039, pokemart overpurchase fix, music finishing touches, gslowpoke, old man, fossils, music kit updates,\n• More autoplay fixes\n• Testing Updates Autoplay, Golden Fix\n…and 6 more",
+      "testing": "",
+      "save": {
+        "schema": 15,
+        "rom_sha256": "73af2f7bb8ee0642998a1b95102a12399e3a9080437922212ff05c772a8cf248",
+        "converter": "save/save-convert-d0b3df697ea2.js",
+        "converter_sha256": "d0b3df697ea2bea38294043becb92c02d2e52f39831ffb337eb6426bb8cdb2e0",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-29_8afbd0d1_red_62fe0cc3.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-29_8afbd0d1_blue_5ec17dd3.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-28 212507c4",
       "label": "2026-10-28 212507c4",
       "date": "2026-10-28",
