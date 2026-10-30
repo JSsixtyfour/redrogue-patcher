@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-10-30 d2b18e7a",
+      "label": "2026-10-30 d2b18e7a",
+      "date": "2026-10-30",
+      "notes": "• Update README.md\n• Update focus on musicial efficiency, new tool  crystal-tracker by Dannye\n• Form Evo Fix, Clodsire Updates, Music Kit Updates, Pokedex Updates\n• Music Kit Updated to include Crystal Tracker\n• Fixed Fuschia Gym Toggle Bug and Remove Johto Gym Gut Toggles",
+      "testing": "",
+      "save": {
+        "schema": 16,
+        "rom_sha256": "ea50b160398f0b60765c8d0b5e928d7013eac9a208e1bfb57a52a0aadaea5ede",
+        "converter": "save/save-convert-4c47141df2bc.js",
+        "converter_sha256": "4c47141df2bcf232ecd393b01bca0f4c586c5cffee8e985219b589cc803fec87",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-10-30_d2b18e7a_red_298c95eb.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-10-30_d2b18e7a_blue_a13f001e.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-29 8afbd0d1",
       "label": "2026-10-29 8afbd0d1",
       "date": "2026-10-29",
