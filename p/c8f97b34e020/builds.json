@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-02 df21cf8d",
+      "label": "2026-11-02 df21cf8d",
+      "date": "2026-11-02",
+      "notes": "• Post Game Palm Cut Scene - Endless\n• credit autoplay tests\n• Additional Autoplay testing\n• learning menu coverage autoplay\n• Trade identity, campaign, and other autoplay tests\n• Smoke Fixes\n• autoplay navigation fixes\n• bag recovery fixes autoplay\n• Pc Identity tests autoplay\n• PC Refusal/retry\n• more pc tests\n• Autoplay updates\n• Autoplay and navigation updates, some text\n• Fixed Lobby Lady having wrong nickname\n• Space Adjustment\n• Legendary Challenge Updates\n• Legendary Challenge Updates\n• Fixed Fake Warps, Daycare 1 level minimum\n• Autoplay battle menu/text fixes\n• Pokemon Mansion Trainer Sight Fixed + Save Guard\n• Remove Route5Underground, Pink Butterfree, Snowlax, Crystal Onix added\n• Text, Autoplay Updates for Endless and such, Grotto, fix to elemental prism, tool updates\n• Trees + text + winter\n• Text Updates, Procedural Forest Grotto, but no Animals\n• Grotto Updates, Snowlax, B1F Ladder Improvements\n• Procedural Winter Updates Complete\n…and 1 more",
+      "testing": "",
+      "save": {
+        "schema": 17,
+        "rom_sha256": "54d7dc0ae7abaea35b94c06a91176d06be260ccb88dca93570c45b661181ede5",
+        "converter": "save/save-convert-ac7bb6714e03.js",
+        "converter_sha256": "ac7bb6714e036bc2609a5617806816f6cde3c72181c4f17dced0b9cd9b8f4f5d",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-02_df21cf8d_red_995f7990.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-02_df21cf8d_blue_1e5a2904.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-10-30 d2b18e7a",
       "label": "2026-10-30 d2b18e7a",
       "date": "2026-10-30",
