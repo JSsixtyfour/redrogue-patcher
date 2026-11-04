@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-04 634afc4e",
+      "label": "2026-11-04 634afc4e",
+      "date": "2026-11-04",
+      "notes": "• Softboiled Returns!\n• Update README.md\n• TM Pricing edits\n• Update README.md\n• RR-0041 removed oaks old poster interactions\n• Cave ladder update + phase 1 of pokedex forms\n• Pokedex Update Part 2 Oak Dialogue and Forms list\n• Potential Glitchy Bag Fix, ladder assignment overhaul,  pokedex revision, reard room revision, forest processing improvements\n• Pokedex Form Entries Added, Autotiling Improvements for Cave\n• Sprite Imports, Autotiling improvements, wild area pokemon names\n• old man update\n• Special Form Dex, Vileplume Moveset Tweak, Run Length Records\n• More moveset tweaks, dorm updates\n• Party Building Tweak, Fallbacks\n• Moveset and Generation Update, Damaging move failsafe\n• Update SilphCoDorm.asm",
+      "testing": "",
+      "save": {
+        "schema": 19,
+        "rom_sha256": "621ba91b25adc446c6097e27f4770c3043f6ec0aafa73f1031b0b67dce45d5d5",
+        "converter": "save/save-convert-541f916af324.js",
+        "converter_sha256": "541f916af324611c1ffc52624a9286bc81a64a97cb158dcef8b4c1b2b1b3ca58",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-04_634afc4e_red_d504fcb8.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-04_634afc4e_blue_7176e8b7.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-02 df21cf8d",
       "label": "2026-11-02 df21cf8d",
       "date": "2026-11-02",
