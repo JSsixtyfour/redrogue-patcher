@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-05 d5d1f710",
+      "label": "2026-11-05 d5d1f710",
+      "date": "2026-11-05",
+      "notes": "• Clipboard Fix use Reward Room Spriteset\n• hgrowlithe added\n• Shiny Fixes, Gamecorner trainer fixes\n• Challenge Fixes, Speed Stacking, No Reward\n• Dice Warning expanded to all challenges\n• Lobby Info Update, witch testing updates\n• hvoltorb, tool updates\n• Rare Soft Lock Fix for Procedural Facility\n• Violet Gym Fix, Villain Hideout Blockage Fix, Old Trainer Moves Removal\n• Vanilla Freozen Crash fix\n• Revised Frozen Pokemon Crash Fix based on Shin Red\n• Fix for Stolen Pokemon Losing their Gifts\n• text updates\n• Small whoops text\n• leftovers",
+      "testing": "",
+      "save": {
+        "schema": 19,
+        "rom_sha256": "b311f847ca1f8f17dae41155357b1e4cf1b644f91cb97425db2fdb67e63e0567",
+        "converter": "save/save-convert-541f916af324.js",
+        "converter_sha256": "541f916af324611c1ffc52624a9286bc81a64a97cb158dcef8b4c1b2b1b3ca58",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-05_d5d1f710_red_7ef4f543.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-05_d5d1f710_blue_9be8b4c9.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-04 634afc4e",
       "label": "2026-11-04 634afc4e",
       "date": "2026-11-04",
