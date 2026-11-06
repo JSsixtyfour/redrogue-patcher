@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-05 f6e66441",
+      "label": "2026-11-05 f6e66441",
+      "date": "2026-11-05",
+      "notes": "• Text Updates, Psychic Psyduck, Antivenom\n• Another psychic gift fix, Spinners added, Clean up, Save Fix\n• smoke fixes",
+      "testing": "",
+      "save": {
+        "schema": 19,
+        "rom_sha256": "dedd2c7a80cdfb7553c51eb1f695bdd6e92a68138165f4118708499440919ffc",
+        "converter": "save/save-convert-777850fb8a14.js",
+        "converter_sha256": "777850fb8a14cd85cf037b5c44ccfb1202e258e99fd7ad5e9462eef84683b6dd",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-05_f6e66441_red_9ea3d54a.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-05_f6e66441_blue_3d7d324e.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-05 d5d1f710",
       "label": "2026-11-05 d5d1f710",
       "date": "2026-11-05",
