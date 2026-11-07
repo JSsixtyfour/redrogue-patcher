@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-07 2438cc95",
+      "label": "2026-11-07 2438cc95",
+      "date": "2026-11-07",
+      "notes": "• Hall of Fame Records Fix before champion\n• ADjust wild area boss masterball roll\n• Text Updates\n• Goldenrod Gym Update\n• Color updates\n• Gym Updates\n• Hypnosis and Dream Eater SFX Fix\n• palette fixes + swimmerb import\n• aratatta added",
+      "testing": "",
+      "save": {
+        "schema": 19,
+        "rom_sha256": "36e29b779dac6a268b128a7d34fd0cb4126dc9d3e4e19fdeb25cde2cc0fbb945",
+        "converter": "save/save-convert-777850fb8a14.js",
+        "converter_sha256": "777850fb8a14cd85cf037b5c44ccfb1202e258e99fd7ad5e9462eef84683b6dd",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-07_2438cc95_red_9eb9353e.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-07_2438cc95_blue_1176cbb4.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-05 f6e66441",
       "label": "2026-11-05 f6e66441",
       "date": "2026-11-05",
