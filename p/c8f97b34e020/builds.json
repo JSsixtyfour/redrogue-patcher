@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-08 a5fdc38f",
+      "label": "2026-11-08 a5fdc38f",
+      "date": "2026-11-08",
+      "notes": "• Honchrow + Ursaluna added, clodside + pwooper updated, adiglett sprite\n• Ursaluna and Honchkrow updates\n• Music Kit Update - Loops\n• Text Updates\n• Phase 2 Plan K Rebalance + Mewtwo Music\n• Changed Evolution Level for PseudoLegenda, phase 3 plan k rebalanceries\n• Phase 4 Plan K\n• Save Fixes Related to Credit Store\n• Updating Documentation of Plan K\n• Phase 1a Facility Dresing + Schema Fix\n• Update PARTY_ROSTER.md\n• Goldenrod fix",
+      "testing": "",
+      "save": {
+        "schema": 19,
+        "rom_sha256": "30c6e4942d86406fa07245cf1497e1012c736ad6d9050b372a92e5b58a3c83d9",
+        "converter": "save/save-convert-777850fb8a14.js",
+        "converter_sha256": "777850fb8a14cd85cf037b5c44ccfb1202e258e99fd7ad5e9462eef84683b6dd",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-08_a5fdc38f_red_cf0621c2.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-08_a5fdc38f_blue_57b6db0e.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-07 2438cc95",
       "label": "2026-11-07 2438cc95",
       "date": "2026-11-07",
