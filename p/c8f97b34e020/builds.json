@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-10 158763ea",
+      "label": "2026-11-10 158763ea",
+      "date": "2026-11-10",
+      "notes": "• Update README.md\n• Pun added, Fighting Dojo Fixes, Text Updates\n• pokedex forms fix, olivine text\n• More text Updates\n• pokemon tower 2F updates\n• Text updates\n• Update bridge_gift_menu.asm\n• You guessed it, more text stuff\n• yup\n• RR-0045 Bag Sorting Update, default healing change + alphabetical option\n• adjust qwilfish\n• Facility 1B + Hisuian Qwilfish line\n• Large Decor for Exits\n• Item scan facility updates\n• Table item placement facility and efficiency improvements\n• Filling out some room gaps and fixing some tests",
+      "testing": "",
+      "save": {
+        "schema": 19,
+        "rom_sha256": "33420a4da0246cd91ac9a30b79977efb72426992509055b429db8b146bb9420f",
+        "converter": "save/save-convert-777850fb8a14.js",
+        "converter_sha256": "777850fb8a14cd85cf037b5c44ccfb1202e258e99fd7ad5e9462eef84683b6dd",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-10_158763ea_red_3abc30ea.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-10_158763ea_blue_2e077953.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-08 a5fdc38f",
       "label": "2026-11-08 a5fdc38f",
       "date": "2026-11-08",
