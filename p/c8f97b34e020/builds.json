@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-12 c4931070",
+      "label": "2026-11-12 c4931070",
+      "date": "2026-11-12",
+      "notes": "• Unique TM phrases\n• Ho Oh Battle Music, Ambush Music Fix, Trade Menu Fix\n• Minor fixes\n• Prevent evolution resurrection\n• Followups #53, 80, 86, and 93\n• Autoplay updates, Missing GBC Palette Updates\n• Facility Warp Pad Updates, Pokedex text, Autoplay updates\n• Text fixes, autoplay/smoke fixes\n• Super Transform Actually Works",
+      "testing": "",
+      "save": {
+        "schema": 19,
+        "rom_sha256": "7a810324adae9de4d91e0b0c7c29b337001c0d5160ee46b9258ce6eba1749073",
+        "converter": "save/save-convert-777850fb8a14.js",
+        "converter_sha256": "777850fb8a14cd85cf037b5c44ccfb1202e258e99fd7ad5e9462eef84683b6dd",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-12_c4931070_red_5bf3567c.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-12_c4931070_blue_fc9fa9c5.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-10 158763ea",
       "label": "2026-11-10 158763ea",
       "date": "2026-11-10",
