@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-14 e0803e25",
+      "label": "2026-11-14 e0803e25",
+      "date": "2026-11-14",
+      "notes": "• Comments update, accuracy, after audit\n• Update core.asm\n• Colors now match everywhere else and don't make weird transition screen\n• Rare Pokemon now get their own Overworld sprites, fixed other sprites, AI finisher updates\n• AI Setup Changes Against Weakened Pokemon\n• AI Scenario testing, more set up tweaks, Follow up 88 and 61\n• 88 + 61 continued, ai switch in and setup changes\n• Update test_ai_telemetry.py\n• AI Speed Judgment Adjustment, +2 move exclusion\n• Phase 2 2 - Crit tests\n• Update README.md\n• High crit move guessing Phase 3\n• Screen Damage Calculation Phase 4\n• RR-0046 Text Fix, Modified Phase 4, Phase 5 Attack Stat Calcs\n• Phase 6 limiting single stage boosts vs double\n• Phase 8 + 9 of Ai Overall 9043056363 Critical Hit Judgment\n• Follow up 1 Crit v Boost Balancing\n• Follow Up 2 COmplete, One Hit KOs\n• Cutting Phase 8 from AI Update #12321312312\n• Telemetry Changes/Fixes - Personalities\n…and 6 more",
+      "testing": "",
+      "save": {
+        "schema": 20,
+        "rom_sha256": "f48f19c8b76363e2af312d8c78cee186bd5568164c72dfb724efad3ac8d38f44",
+        "converter": "save/save-convert-969183d30ab3.js",
+        "converter_sha256": "969183d30ab35669994c70b1cdeef30df65d495c2242d1e3456d280acf8bcf17",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-14_e0803e25_red_4dc8a75a.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-14_e0803e25_blue_37976f44.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-12 c4931070",
       "label": "2026-11-12 c4931070",
       "date": "2026-11-12",
