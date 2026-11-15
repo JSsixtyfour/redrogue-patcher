@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-14 ad304ab2",
+      "label": "2026-11-14 ad304ab2",
+      "date": "2026-11-14",
+      "notes": "• garbage text fix oaks lab\n• Part 1 Challenge/Heat System\n• Part 2 Challenge System\n• Follow Ups Run Challenge System\n• Oaks lab Rival walk fix, swinub color, pokedex evo Part A, learnset tweaks\n• Part B Pokedex/Evo Documentation\n• Moveset and Band Updates\n• Fixing Glitches Mahogany Gym Updates, Sound fixes\n• Gym Routine Efficiency Boost, Room PC Glitch Fix\n• Alolan Grimer Image\n• Increased efficiency for OBP palettes, Mahogany Tweaks\n• Update hidden_events.asm\n• Update test_gym_statues.py",
+      "testing": "",
+      "save": {
+        "schema": 21,
+        "rom_sha256": "b935df5b11d05be1d2983ca2c91ab0de00617c7a58401fbff3dd7b3f6b136c52",
+        "converter": "save/save-convert-45d8a452b9c0.js",
+        "converter_sha256": "45d8a452b9c05b9777d6e3d3d2ff6858744fe8aaecf176a386f441c602613998",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-14_ad304ab2_red_a4b287ef.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-14_ad304ab2_blue_e1626e77.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-14 e0803e25",
       "label": "2026-11-14 e0803e25",
       "date": "2026-11-14",
