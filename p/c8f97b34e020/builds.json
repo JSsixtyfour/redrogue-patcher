@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-18 7b6a9606",
+      "label": "2026-11-18 7b6a9606",
+      "date": "2026-11-18",
+      "notes": "• Excluding Johto Forms from Warp Only\n• pikachu level up moves tweaks\n• Beedrill\n• masterball color changed, debug color tester added\n• Follower Update- Correct Facing\n• Moveset tweaks + Fix to Item Consumption\n• Fixes to Form Based Pokeball and Mankey Warp Adjustment\n• whoops\n• AI Type Immunity Change + Karate Master Text fix\n• Daycare Changes, Music Kit Tweaks\n• Koffing Learnset Improvements\n• Moveset/LEarnset updates\n• Pokemon Pricing Updates\n• Post KO Send Out - AI Improvement\n• Follower, Music Kit, AI Trainer, Daycare Tweaks\n• You guessed it AI Update Pass # 579\n• You guessed it AI Update Pass # 579\n• Testing AI Smoke\n• AI efficiency boost for Post KO switching, Sprites, Patching for Music Kit\n• petit cup 1-3. poke cup 4-6, and pika 1-3, and associated code\n• B17 stalemate breakers + Debug sound test names\n• Allowing status effects before a forced switch when no damage possible\n• More AI switching logic B17\n• smoke updates\n• Minor Old Save Fix\n…and 12 more",
+      "testing": "",
+      "save": {
+        "schema": 22,
+        "rom_sha256": "260d3cafef6de497aa3e0c976bba94bd288b0253caa44c63899219e7a49ecc2e",
+        "converter": "save/save-convert-340eb612da97.js",
+        "converter_sha256": "340eb612da9759d25a73e3a1bbf687a12d8a4844f2838098f1422fcb419b3ade",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-18_7b6a9606_red_5980a914.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-18_7b6a9606_blue_dfa2969e.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-14 ad304ab2",
       "label": "2026-11-14 ad304ab2",
       "date": "2026-11-14",
