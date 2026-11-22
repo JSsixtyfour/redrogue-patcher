@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-21 c36a87a5",
+      "label": "2026-11-21 c36a87a5",
+      "date": "2026-11-21",
+      "notes": "• D D D D Deep Forest\n• Haze AI Changes + Forest Test Fixes\n• snorlax learnset tweaks\n• Snorlax Dominos\n• Statute Test Fix\n• Deep FACILITY\n• Update test_campaign_limits.py\n• Cemetery Extra Floors on later stages\n• Deep Facility\n• More randomness in move selection\n• Gift Trainer Fixes that allow more special pokemon statuses\n• Fixes to E4 Move Selection Randomness\n• Resurrection NPC part 1\n• Multiply+ Divide  Can indeed be faster, Reviver Part 2\n• Fixes to prior commit\n• Generic Trainer\n• Testing fixes\n• crit cache\n• Haze Updates + Generic Trainer in Wild Areas\n• Generic Trainers in Cave and Facility\n• Schema Update\n• Generic Trainer Tweaks and Deep Floor Percentages\n• Switch changes\n• Move Tutor Fast Mode, Sleep Clause Warning\n• Venonat is pokeball\n• Accidental Gym Leader AI Boost Fixed, warden text, glyph changes\n• Minor tweaks to maps\n• Thunderwave AI Tweaks, Wild Area Pokemon rate changes\n• Wild Encounter Rate Updates, Fixes to Cemetery Reviver, AI fixes,\n…and 1 more",
+      "testing": "",
+      "save": {
+        "schema": 25,
+        "rom_sha256": "d3eb03ccbc0433c31dd924b8e968b027f2ec15e8a2cbad873bd680553ff68418",
+        "converter": "save/save-convert-77ff388acf4c.js",
+        "converter_sha256": "77ff388acf4cb48c82d5906cb1e7e1eae2b999c12ffe494744e95e8b195570e2",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-21_c36a87a5_red_6761cfc7.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-21_c36a87a5_blue_a9121420.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-18 7b6a9606",
       "label": "2026-11-18 7b6a9606",
       "date": "2026-11-18",
