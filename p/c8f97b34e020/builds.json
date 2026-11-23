@@ -8,7 +8,7 @@
       "testing": "",
       "save": {
         "schema": 25,
-        "rom_sha256": "da74024f12847d78e1ba80afb9e48452848c30d140013443d3dd3f3d82e54b6d",
+        "rom_sha256": "6f7864a40ba439c024f93561a0bd67ee8c62a0a9ac38d710c4b9d046a6c4b271",
         "converter": "save/save-convert-77ff388acf4c.js",
         "converter_sha256": "77ff388acf4cb48c82d5906cb1e7e1eae2b999c12ffe494744e95e8b195570e2",
         "compatibility": "unverified"
@@ -16,12 +16,12 @@
       "patches": [
         {
           "game": "red",
-          "file": "patches/RedRogue_2026-11-23_65dbbe33_red_72cbe211.bps",
+          "file": "patches/RedRogue_2026-11-23_65dbbe33_red_f8819e31.bps",
           "crc32": "9f7fdd53"
         },
         {
           "game": "blue",
-          "file": "patches/RedRogue_2026-11-23_65dbbe33_blue_576882d0.bps",
+          "file": "patches/RedRogue_2026-11-23_65dbbe33_blue_bbb5d729.bps",
           "crc32": "d6da8a1a"
         }
       ]
