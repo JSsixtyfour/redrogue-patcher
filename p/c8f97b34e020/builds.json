@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-23 65dbbe33",
+      "label": "2026-11-23 65dbbe33",
+      "date": "2026-11-23",
+      "notes": "• Minor Super Fang Improvement - AI\n• AI Fix, OHKO, Gamblers Fixes, Game Corner Goof, DOjo menu fix\n• DUMB DUMB DUMB DUMB - OHKO AI Fix\n• Calmed Cycles Reduction + Protection last stolen pokemon\n• Birds!\n• Allspecies check fix, Agatha Update, Victory Road Updates, Champion Lance Cutscene Updates, Ace generation fix, miniboss text\n• Gotta update this too for our bird buds\n• Update movesets.asm",
+      "testing": "",
+      "save": {
+        "schema": 25,
+        "rom_sha256": "da74024f12847d78e1ba80afb9e48452848c30d140013443d3dd3f3d82e54b6d",
+        "converter": "save/save-convert-77ff388acf4c.js",
+        "converter_sha256": "77ff388acf4cb48c82d5906cb1e7e1eae2b999c12ffe494744e95e8b195570e2",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-23_65dbbe33_red_72cbe211.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-23_65dbbe33_blue_576882d0.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-21 c36a87a5",
       "label": "2026-11-21 c36a87a5",
       "date": "2026-11-21",
