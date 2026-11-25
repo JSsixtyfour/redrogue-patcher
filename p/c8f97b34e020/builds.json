@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-25 2d0797d9",
+      "label": "2026-11-25 2d0797d9",
+      "date": "2026-11-25",
+      "notes": "• Text tweaks\n• Fix to Mirror Move Crash, Nighly Updates\n• Text fixes gifts",
+      "testing": "",
+      "save": {
+        "schema": 25,
+        "rom_sha256": "ccabd07cd7fb98d837ed660f7d15bf6b69a97d6e26aa17192757b2baa868682d",
+        "converter": "save/save-convert-77ff388acf4c.js",
+        "converter_sha256": "77ff388acf4cb48c82d5906cb1e7e1eae2b999c12ffe494744e95e8b195570e2",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-25_2d0797d9_red_1be4138b.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-25_2d0797d9_blue_68243d5c.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-24 70ec787e",
       "label": "2026-11-24 70ec787e",
       "date": "2026-11-24",
