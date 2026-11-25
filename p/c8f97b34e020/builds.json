@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-24 70ec787e",
+      "label": "2026-11-24 70ec787e",
+      "date": "2026-11-24",
+      "notes": "• side effect same type block gambler\n• Weavile Sprite Import\n• Nightly Fixes, Error with AI Delay Tactics Crash\n• fixed another no move crash\n• Bide, Counter Fix from ShinRed, Nightly Improvements, Item Text Fixes, Mon Dice Expansions\n• Dice Expansion and Edits, KO Defiance Move\n• Nightly Improvements, Fixed Obscure Crashes Overworld, transform moves fix,, fix to delay strats\n• Documentation Changes\n• Update event_constants.asm",
+      "testing": "",
+      "save": {
+        "schema": 25,
+        "rom_sha256": "790b837451543b4a0272271e568f8f33f373175c1bb2a3cd9b6dcf01b96acf26",
+        "converter": "save/save-convert-77ff388acf4c.js",
+        "converter_sha256": "77ff388acf4cb48c82d5906cb1e7e1eae2b999c12ffe494744e95e8b195570e2",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-24_70ec787e_red_49ecfff9.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-24_70ec787e_blue_947ff72e.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-23 65dbbe33",
       "label": "2026-11-23 65dbbe33",
       "date": "2026-11-23",
