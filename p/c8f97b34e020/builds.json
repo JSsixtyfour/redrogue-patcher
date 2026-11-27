@@ -1,6 +1,32 @@
 {
   "builds": [
     {
+      "id": "2026-11-27 1d5b8552",
+      "label": "2026-11-27 1d5b8552",
+      "date": "2026-11-27",
+      "notes": "• granny switch\n• Element Boy Rename, Shiny Fixes, Pokemaniac pokemon fix\n• Update nightly_session_status.py\n• Emulator Name\n• mewtwo sprite inadequate\n• Import New Version of Petit Cup, Rearranging for Music Space, Fixing Smoke Test, Music Import Update, Petit Cup\n• Removing Unused Rocket Theme and using Look Rocket, as well as blue field and TCG tracks\n• import tools music\n• No Revives in Ironman\n• Route 5 Tweaks\n• Evolution Page, Forest Testing Fixes\n• Smoke Fixes\n• Move info update, Updated Sprites, Cute Boost Guard, Move Tutor Tweak\n• sprite upgrades\n• Update test_yellow_legacy_overworld_sprites.py",
+      "testing": "",
+      "save": {
+        "schema": 26,
+        "rom_sha256": "b1159fa0471ae0662333fa687dc575b13a8795f08173252dde86c1c164d640ca",
+        "converter": "save/save-convert-045fc21c848c.js",
+        "converter_sha256": "045fc21c848c94480511c7f9ba80d06e57818891d3bd819f20ac88dfa1d2db06",
+        "compatibility": "unverified"
+      },
+      "patches": [
+        {
+          "game": "red",
+          "file": "patches/RedRogue_2026-11-27_1d5b8552_red_056c5d1e.bps",
+          "crc32": "9f7fdd53"
+        },
+        {
+          "game": "blue",
+          "file": "patches/RedRogue_2026-11-27_1d5b8552_blue_c885edb3.bps",
+          "crc32": "d6da8a1a"
+        }
+      ]
+    },
+    {
       "id": "2026-11-25 2d0797d9",
       "label": "2026-11-25 2d0797d9",
       "date": "2026-11-25",
